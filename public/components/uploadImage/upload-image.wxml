@@ -1,0 +1,22 @@
+<!--public/components/uploadImage/upload-image.wxml-->
+<view class="upload-wrap {{ (uploadImagePath != '' || privewImagePath != '') ? '' : 'upload-wrap--line' }}"
+  hover-class="upload--active"
+  hover-stay-time="100"
+  bindtap="handleChooseImage">
+
+  <!-- 展示图片 -->
+  <view class="upload-image--privew"
+    wx:if="{{ uploadImagePath || privewImagePath }}">
+    <image class="privew-image" src="{{ uploadImagePath }}" mode="aspectFit"></image>
+  </view>
+
+  <!-- 上传图片 -->
+  <view class="upload-image--up" wx:else>
+    <image class="upload-image {{ imageSize }}" src="{{ defaultSrc }}"></image>
+    <text class="upload-image_text">{{ label }}</text>
+  </view>
+</view>
+
+<view class="privew-btn"
+  wx:if="{{ boost }}"
+  bindtap="handleImageUp">查看大图</view>

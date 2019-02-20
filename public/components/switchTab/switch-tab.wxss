@@ -1,0 +1,35 @@
+/* public/components/switchTab/switch-tab.wxss */
+.tab-wrap { width: 100%; }
+.tab-head { display: flex; }
+.tab-head .tab-head_item { position: relative; display: flex; align-items: center; justify-content: center; flex-grow: 1;
+  min-height: 80rpx; font-size: 28rpx; color: #73737D; border-bottom: 8rpx solid transparent; }
+.tab-head_title { display: inline-block; width: 100%; text-align: center; }
+.tab-head_title.line { border-right: 1rpx solid #ECEDF1; }
+.tab-head_item:last-child .line { border-right: none; }
+.tab-head .tab-head_item.tab-active--line { border-bottom: 8rpx solid #1EA0FF; color: #1E2328; }
+.tab-content { border: 1px solid #ccc; }
+.tab-content .tab-content_inner { position: relative; }
+.tab-scroll { height: 100%; }
+
+/* 加载中动画 */
+.tab-lower--loading { position: absolute; width: 100%; padding: 10px 0; font-size: 12px; text-align: center; }
+.tab-loading--active { animation: loadingShow 1s .5s forwards; }
+.loading-rotate { display: inline-block; animation: rotateAll 1s linear infinite; }
+@keyframes loadingShow {
+  from {
+    opacity: 0;
+    transform: translateY(5px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+@keyframes rotateAll {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}

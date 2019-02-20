@@ -1,0 +1,22 @@
+/* public/table/table.wxss */
+/* table样式 */
+.table { margin: 30rpx 0 50rpx; }
+.table .table-title { font-size: 28rpx; text-align: center; }
+.table .table-content { display: table; width: 670rpx; margin: 20rpx auto 0; border: 1rpx solid #E6E6EB;
+ font-size: 24rpx; color: #73737D; }
+.table .table-content .tbody .tr::after,
+.table .table-content .thead::after,
+.table .table-content .tbody::after { content: ""; display: block; height: 0; clear: both; }
+.table .table-content .thead .th,
+.table .table-content .tbody .td { float: left; height: 72rpx; line-height: 72rpx; text-align: center; 
+  border-right: 1rpx solid #E6E6EB; padding: 0 5rpx; box-sizing: border-box; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.table .table-content .thead .th:last-child,
+.table .table-content .tbody .td:last-child { border: 0; }
+
+.table .table-content .thead > .th:first-child,
+.table .table-content .tbody .td:first-child { width: 50%; }
+.table .table-content .thead > .th:not(:first-child),
+.table .table-content .tbody .td:not(:first-child) { width: 25%; }
+.table .table-content .tbody .tr { border-top: 1rpx solid #E6E6EB; }
+.table .table-content .tbody .tr.total .td:first-child { width: 75%; }
+.table .table-content .tbody .tr .td.total { color: #FF5F5F }

@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "usingComponents": {
+    "font-icon": "./public/components/fontIcon/font-icon",
+    "switch-tab": "./public/components/switchTab/switch-tab",
+    "xi-button": "./public/components/button/button",
+    "xi-modal": "./public/components/modal/modal",
+    "xi-date": "./public/components/date/date",
+    "xi-message": "./public/components/message/message",
+    "xi-cell": "./public/components/cell/cell",
+    "xi-dialog": "./public/components/dialog/dialog",
+    "columns-ul": "./public/components/list/columnsUl/columns-ul",
+    "columns-li": "./public/components/list/columnsLi/columns-li"
+  }
+}

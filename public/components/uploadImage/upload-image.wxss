@@ -1,0 +1,12 @@
+/* public/components/uploadImage/upload-image.wxss */
+.upload--active { opacity: .5; }
+.upload-wrap { position: relative; width: 100%; height: 100%; }
+.upload-wrap--line { border: 1rpx dashed #ccc; }
+/* .upload-wrap .upload-image { position: absolute; top: 50%; left: 50%; } */
+.upload-wrap .upload-image.min { width: 60rpx; height: 60rpx; }
+.upload-wrap .upload-image.max { width: 80rpx; height: 80rpx; }
+.upload-wrap .upload-image_text { font-size: 20rpx; color: #000; }
+.upload-image--privew { display: flex; justify-content: center; align-items: center; height: 100%; }
+.upload-image--up { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.privew-image { width: 100%; height: 100% }
+.privew-btn { font-size: 12px; text-align: right; padding: 10rpx 30rpx; color: #73737D; }

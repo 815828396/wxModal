@@ -1,0 +1,61 @@
+/* 无线旋转 */
+.loading-rotate { display: inline-block; animation: rotateAll .8s linear infinite; }
+.loading-text { margin-left: 20rpx; font-size: 24rpx; color: #73737D; }
+/* 1px 解决问题 */
+.border-top-1px,
+.border-left-1px,
+.border-right-1px,
+.border-bottom-1px { position: relative; }
+
+.border-bottom-1px::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #E6E6EB;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+.border-top-1px::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 1px;
+  background-color: #E6E6EB;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+.border-right-1px::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: #E6E6EB;
+  -webkit-transform: scale(0.5, 1);
+  transform: scale(0.5, 1);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+.border-left-1px::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #E6E6EB;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}

@@ -1,0 +1,2 @@
+/* public/components/list/columnsLi/columns-li.wxss */
+.lititle { color: red }

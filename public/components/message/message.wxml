@@ -1,0 +1,4 @@
+<!--public/components/message/message.wxml-->
+<view class="xi-message xi-message--{{ type }} {{ visible ? 'show' : '' }}">
+  {{ content }}
+</view>

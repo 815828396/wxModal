@@ -1,0 +1,14 @@
+<!--public/components/button/button.wxml-->
+<view class="button-wrap {{ small ? 'small' : '' }}"
+  hover-class="btn--active"
+  hover-stay-time="100"
+  bindtap="handleClick">
+  <view class="button-box {{ type }}">
+    <font-icon
+      wx:if="{{ loading }}"
+      class="icon {{ loading ? 'loading-rotate' : '' }}"
+      iconClass="{{ iconClass }}"
+    ></font-icon>
+    <slot></slot>
+  </view>
+</view>

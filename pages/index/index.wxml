@@ -1,0 +1,24 @@
+<!--pages/index/index.wxml-->
+<!-- <import src="../../wxParse/wxParse.wxml" /> -->
+<view class='shadowLayer'
+  style="background: #73737D;">
+  <view class='layerBox' >
+    <!-- <image class='forkImg' src='../../assets/images/closeLayer.png'></image> -->
+    <image class='artboard' src='../../assets/images/artboard.png'></image>
+    <text class='appname'>仲达集团管理系统</text>
+    <view style="margin-top: 142rpx;">
+      <view class="proEno">{{ ermsg }}</view>
+      <button class='loginBtn'
+        open-type="getUserInfo"
+        bindgetuserinfo="getUserInfo"
+        loading="{{ loginLoading }}">立即登录</button>
+    </view>
+  </view>
+
+  <!-- 后台发送消息通知 -->
+  <!-- <view class="filter" wx:if="{{ noticShow }}">
+    <rich-text nodes="{{ notic }}"></rich-text>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    <button bindtap='jump'>已阅读</button>
+  </view> -->
+</view>

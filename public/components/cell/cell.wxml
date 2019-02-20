@@ -1,0 +1,39 @@
+<!--public/components/list/list.wxml-->
+<view class="list-cell"
+  bindtap='handelClick'
+  hover-class="{{ !router ? '' : 'hoverClick'}}"
+  hover-stay-time="100">
+  <label
+    for="scope"
+    class="list-cell-inner {{ type ? 'between' : '' }} {{ border === 'none' ? '' : 'border-bottom-1px' }}">
+    <view class="list-inner--title">
+      <slot name="title"></slot>
+    </view>
+    <!-- 自定义 msg 内容 -->
+    <view
+      wx:if="{{ cellType === '' }}"
+      class="list-inner--msg">
+      <slot name="msg"></slot>
+    </view>
+    <!-- switch 选项 -->
+    <view
+      wx:if="{{ cellType === 'switch' }}">
+      <slot name="msg"></slot>
+      <switch id="scope"
+        checked="{{ switchChecked }}"
+        bindchange="handleSwitch"></switch>
+    </view>
+    <!-- input -->
+    <view wx:if="{{ cellType === 'input' }}">
+      <input
+        class="list-cell_input"
+        id="scope"
+        type="text"
+        cursor-spacing="100rpx"
+        placeholder="{{ placeholder }}"
+        value="{{ value }}"
+        adjust-position="true"
+        bindinput="handleInputChange"/>
+    </view>
+  </label>
+</view>

@@ -1,0 +1,45 @@
+<!--public/components/switchTab/switch-tab.wxml-->
+<view class="tab-wrap" id="tabbar">
+  <!-- tab head -->
+  <view class="tab-head">
+    <view class="tab-head_item {{ tabActive == index ? 'tab-active--line' : '' }} "
+      wx:for="{{ tabColumns }}"
+      wx:for-item='columns'
+      wx:key="index"
+      data-index="{{ index }}"
+      bindtap="tabClick">
+
+      <text class="tab-head_title {{ textLine ? 'line' : '' }}">{{ columns.title }}</text>
+
+      <slot name="{{ 'tabHead' + columns.key }}"></slot>
+    </view>
+
+    <!-- 后期在做可滑动 线条 -->
+    <view class="tab-active--line_pos"></view>
+  </view>
+
+  <!-- tab content -->
+  <view class="tab-content">
+    <view class="tab-content_inner"
+      style="height: {{ scrollHeight }}rpx"
+      wx:for="{{ tabColumns }}"
+      wx:key="{{ index }}"
+      wx:if="{{ tabActive == index }}">
+
+      <scroll-view
+        class="tab-scroll"
+        scroll-y="{{ isScroll }}"
+        bindscrolltolower="handleLower">
+
+        <!-- content 内容插槽 -->
+        <slot name="{{ item.key }}"></slot>
+
+        <!-- loading 加载 -->
+        <view class="tab-lower--loading {{ tabLoading ? 'tab-loading--active' : '' }}">
+          <font-icon class="{{ tabLoading ? 'loading-rotate' : '' }}" iconClass="icon-loading" />
+          加载中...
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

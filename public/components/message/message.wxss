@@ -1,0 +1,8 @@
+/* public/components/message/message.wxss */
+.xi-message { position: fixed; top: 0; left: 0; width: 100%; min-height: 70rpx; line-height: 70rpx; font-size: 24rpx; text-align: center;
+  color: #fff; transform: translateY(-100%); opacity: 0; transition: all .4s ease-in-out; }
+.xi-message--default { background: #2db7f5; }
+.xi-message--error { background: #ed4014; }
+.xi-message--warning { background: #ff9900; }
+.xi-message--success { background: #19be6b; }
+.show { transform: translateY(0); opacity: 1; }

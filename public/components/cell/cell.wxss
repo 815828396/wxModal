@@ -1,0 +1,9 @@
+/* public/components/list/list.wxss */
+@import '../../../assets/styles/_mixin.wxss';
+.list-cell { padding-left: 30rpx; box-sizing: border-box; }
+.list-cell.hoverClick { background: #ececec; }
+.list-cell .list-cell-inner { display: flex; align-items: center; height: 100rpx; padding-right: 30rpx; font-size: 32rpx; }
+.list-cell .list-cell-inner .list-inner--title { min-width: 200rpx; }
+.list-cell .list-cell-inner.between { justify-content: space-between;}
+.list-cell .list-inner--msg { font-size: 28rpx;}
+.list-cell_input { text-align: right; }

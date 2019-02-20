@@ -1,0 +1,22 @@
+/* public/date/date.wxss */
+.dateFilter {
+  display: flex;
+  flex-grow: 1;
+  text-align: right;
+  justify-content: flex-end;
+  font-size: 24rpx;
+}
+.dateFilter .select-icon {
+  width: 20rpx;
+  height: 12rpx;
+}
+.dateFilter .data-line {
+  margin: 0 22rpx;
+}
+.picker.disabled {
+  color: #73737D !important;
+}
+.picker .iconfont {
+  margin-left: 20rpx;
+  font-size: 30rpx !important;
+}

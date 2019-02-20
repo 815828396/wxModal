@@ -1,0 +1,4 @@
+<!--public/components/fontIcon/font-icon.wxml-->
+<view class="iconfont-wrap">
+  <text class="iconfont {{ iconClass }}"></text>
+</view>

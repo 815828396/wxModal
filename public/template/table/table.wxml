@@ -1,0 +1,44 @@
+<!-- template table -->
+<wxs src="./table.wxs" module="table" />
+<template name='table'>
+  <view class="table">
+    <view class="table-title">{{ tableData.name }}</view>
+    <view class="table-content">
+      <view class="thead">
+        <view class="th"
+          wx:for="{{ tableData.title }}"
+          wx:for-item="col"
+          wx:key="index">
+          {{ col.text }}
+        </view>
+      </view>
+      <view class="tbody">
+
+        <!-- 账单项目展示 -->
+        <view class="tr"
+          wx:for="{{ tableData.columns }}"
+          wx:key="index"
+          wx:for-item="columns">
+          <view class="td"
+            wx:for="{{ columns }}"
+            wx:key="index">
+            {{ item }}
+          </view>  
+        </view>
+
+        <!-- 合计 -->
+        <view class="tr total"
+          wx:if="{{ tableData.show }}">
+          <view class="td">合计</view>
+          <view class="td total">{{ tableData.first || '' }}元</view>
+        </view>
+        <view class="tr"
+          wx:else>
+          <view class="td total">合计</view>
+          <view class="td total">{{ tableData.first }}yuan</view>
+          <view class="td total">{{ tableData.second }}元</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,4 @@
+<!--public/components/list/columnsUl/columns-ul.wxml-->
+<view class="columns-ul">
+  <slot></slot>
+</view>

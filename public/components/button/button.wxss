@@ -1,0 +1,11 @@
+/* public/components/button/button.wxss */
+@import '../../../assets/styles/_mixin.wxss';
+.button-wrap { width: 100%; }
+.btn--active { opacity: .8; }
+.button-wrap .button-box { height: 80rpx; text-align: center; line-height: 80rpx; color: #fff; font-size: 32rpx;}
+.button-wrap .button-box .icon { margin-right: 10rpx; }
+.button-wrap.small .button-box { height: 64rpx; line-height: 64rpx; color: #fff; font-size: 28rpx; padding: 0 18rpx; }
+.button-wrap .button-box.default { background: transparent; color: #1E2328; border: 1rpx solid #C8C8D2; }
+.button-wrap .button-box.disabled { background: #969BA5; border: 1rpx solid #969BA5; }
+.button-wrap .button-box.primary { background: #1EA0FF; border: 1rpx solid #1EA0FF; }
+/* .button-wrap .button-box.primary:hover { opacity: .8} */

@@ -1,0 +1,29 @@
+<!--public/components/modal/modal.wxml-->
+<view class="xi-modal">
+  <view class="xi-modal-content">
+    <view class="xi-modal__title {{ border ? 'border-bottom-1px' : '' }}"
+      wx:if="{{ title }}">
+      {{ title }}
+    </view>
+
+    <!-- container -->
+    <view class="xi-modal__cont">
+      {{ content }}
+      <slot></slot>
+    </view>
+
+    <!-- button -->
+    <view class="xi-modal__button">
+      <view class="btn-item"
+        wx:if="{{ cancel }}">
+        <xi-button type="default"
+          bind:click="handleCancel">{{ cancel }}</xi-button>
+      </view>
+      <view class="btn-item"
+        wx:if="{{ confirm }}">
+        <xi-button
+          bind:click="handleConfirm">{{ confirm }}</xi-button>
+      </view>
+    </view>
+  </view>
+</view>

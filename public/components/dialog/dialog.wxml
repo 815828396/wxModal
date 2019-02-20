@@ -1,0 +1,20 @@
+<!--public/dialog/dialog.wxml-->
+<view class="dialog-filter">
+  <view class="dialog_wrap">
+    <!-- 关闭按钮 -->
+    <view style="text-align: right" hidden="{{ !showClose }}">
+      <image class="dialog_close" src="../../images/closeLayer.png"></image>
+    </view>
+    <!-- 状态图片 -->
+    <image class="dialog_img {{ !showClose ? 'mt40' : '' }}" src="{{ imgsrc }}"></image>
+    <!-- 描述内容 -->
+    <view class="dialog_content">
+      <slot></slot>
+    </view>
+    <view class="dialog_btn">
+      <xi-button>{{ btnText }}</xi-button>
+      <!-- <button hover-class='opacity' hover-stay-time='100'
+        bindtap="click">{{ btnText }}</button> -->
+    </view>
+  </view>
+</view>

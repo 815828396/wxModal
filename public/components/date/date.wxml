@@ -1,0 +1,27 @@
+<!--public/date/date.wxml-->
+<!-- 日期选择 自定义组件 -->
+<view class="dateFilter">
+  <!-- 开始日期 -->
+  <picker mode="date" value="{{date.startValue}}" start="{{ start || '2008-01-01' }}" end="{{ end || '2027-01-01' }}"
+    data-target="{{ target }}"
+    data-datename="start"
+    bindchange="bindDateChange">
+    <view class="picker">
+      <text>{{ date.startValue }}</text>
+      <font-icon iconClass="icon-iconfontjiantou"></font-icon>
+    </view>
+  </picker>
+  <view class="data-line">-</view>
+  <!-- 结束日期 -->
+  <!-- 结束日期的 start 时间为， 开始日期的选择值 -->
+  <picker mode="date" value="{{date.endValue}}" start="{{ date.startValue }}" end="{{ end || '2027-01-01' }}"
+    data-target="{{ target }}"
+    data-datename="end"
+    disabled="{{ date.startValue === '开始日期' ? true : fasle }}"
+    bindchange="bindDateChange">
+    <view class="picker {{ date.startValue === '开始日期' ? 'disabled' : '' }}">
+      <text>{{ date.endValue }}</text>
+      <font-icon iconClass="icon-iconfontjiantou"></font-icon>
+    </view>
+  </picker>
+</view>
