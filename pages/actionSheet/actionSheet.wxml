@@ -1,0 +1,15 @@
+<!--pages/actionSheet/actionSheet.wxml-->
+
+<view style="padding: 30rpx; border: 1rpx solid #ccc" bindtap="tapname">
+  长按区域
+</view>
+
+<xi-message id="message"></xi-message>
+
+<xi-action-sheet
+  visiable="{{ isShow }}"
+  actions="{{ actions }}"
+  container-class="das"
+  cancel-text="取消"
+  bind:cancel="cancel">
+</xi-action-sheet>

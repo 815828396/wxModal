@@ -1,4 +1,4 @@
-
+@import './_mixin.wxss';
 /* image { width: 100%; height: 100%; } */
 .flexbox { display: flex; }
 .fl { float: left; }
@@ -21,22 +21,3 @@
 .pl30 { padding-left: 30rpx; }
 .resetBtn { padding-left: 10rpx; border-left: 1rpx solid #73737D !important; }
 .scroll-h { height: 100%; }
-/* 点击超链接样式 */
-.clickHover { background: #ececec !important; }
-.clickOpacity { opacity: .8; }
-/* 无消息数据展示 */
-.cant-data_desc { font-size: 28rpx; color: #73737D; }
-.cant-data_img { width: 304rpx; height: 304rpx; }
-.data-iconfont-max { font-size: 100rpx !important; color: #1EA0FF }
-.data-iconfont-middle { font-size: 50rpx !important;  }
-
-.no-data-img image { width: 80%; height: auto; }
-.filter-data-common,
-.loading-data-common { margin: 100rpx 0 0; }
-.filter-reset-btn { width: 200rpx; padding: 10rpx 0; background: transparent; border: 1rpx solid #1EA0FF; line-height: 30rpx; margin-top: 20rpx; color: #1EA0FF; font-size: 22rpx; }
-/* 无线旋转 */
-.loading-rotate { display: inline-block; animation: rotateAll 1s linear infinite; }
-.loading-text { margin-left: 20rpx; font-size: 24rpx; color: #73737D; }
-/* 浮动小消息 */
-.prealtive { position: relative }
-.tip-float-news { position: absolute; width: 26rpx; height: 26rpx; font-size: 16rpx; color: #fff; background: #FA644B; border-radius: 50%; top: 15rpx; right: 4rpx; text-align: center;line-height: 26rpx; }

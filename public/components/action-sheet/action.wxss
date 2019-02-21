@@ -1,0 +1,11 @@
+/* public/components/action/action.wxss */
+@import '../../../assets/styles/_mixin.wxss';
+.xi-action { opacity: 0; z-index: -10; transition: all .3s; }
+.xi-container { position: absolute; bottom: -100%; width: 100%; min-height: 300rpx; font-size: 28rpx; 
+  transition: all .3s ease-in-out; }
+.xi-container .xi-item { padding: 0 25rpx; box-sizing: border-box; height: 100rpx; line-height: 100rpx; text-align: center; background: #fff; }
+.xi-container .xi-item .xi-item--desc { font-size: 24rpx; color: #7d7e80; }
+.xi-container .xi-item.xi-cancel--text { margin-top: 20rpx; color: #6d6d6d; }
+.xi-container .xi-item.disabled { color: #c8c9cc; }
+.xi-action--show { bottom: 0; }
+.xi-show { opacity: 1; z-index: 100; }

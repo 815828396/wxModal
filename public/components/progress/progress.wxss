@@ -1,0 +1,13 @@
+/* public/components/progress/progress.wxss */
+.xi-progress { padding: 10rpx 20rpx; box-sizing: border-box; }
+.xi-progress__header .header { display: flex; justify-content: space-between; font-size: 24rpx; color: #73737D }
+/* progress */
+.xi-progress__pro,
+.xi-progress__pro .progress_status { border-radius: 18rpx; height: 36rpx; transition: all 1s; overflow: hidden; }
+.xi-progress__pro { position: relative; width: 100%; margin: 28rpx 0 45rpx; background: #C8C8D2; }
+.xi-progress__pro .progress_status { position: absolute; left: 0; top: 0; font-size: 20rpx; color: #fff; 
+  text-align: right; padding: 0 20rpx; line-height: 36rpx; box-sizing: border-box; }
+.xi-progress__pro .progress_status.normal { background: linear-gradient(270deg,rgba(0,224,54,1) 0%,rgba(0,190,25,1) 100%); }
+.xi-progress__pro .progress_status.error { background: linear-gradient(270deg,rgba(255,137,137,1) 0%,rgba(255,81,81,1) 100%); }
+.goods-stock_progress .stock { display: flex; justify-content: space-between; align-items: center; height: 2rpx; 
+  background: #00BE19;  }

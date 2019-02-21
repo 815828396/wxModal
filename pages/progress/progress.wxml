@@ -1,0 +1,7 @@
+<!--pages/progress/progress.wxml-->
+<xi-button bind:click="click">改变数值</xi-button>
+<xi-progress
+  title="物料状态"
+  desc="剩余(100台)"
+  type="{{ type }}"
+  progress="{{ progress }}"></xi-progress>

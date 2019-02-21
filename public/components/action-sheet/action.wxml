@@ -1,0 +1,39 @@
+<!--public/components/action/action.wxml-->
+<view class="xi-action xi-background {{ visiable ? 'xi-show' : '' }}"
+  data-target="close"
+  bindtap="handleClose">
+  
+  <view class="xi-container {{ 'container-class' }} {{ visiable ? 'xi-action--show' : '' }}">
+
+    <!-- header -->
+    <view><slot name="header"></slot></view>
+
+    <!-- 单项表 -->
+    <view class="xi-item ellipsis {{ 'item-class' }} {{ action.disabled ? 'disabled' : '' }}"
+      wx:for="{{ actions }}"
+      wx:for-item="action"
+      wx:key="{{ index }}"
+      bindtap="handleItemClick"
+
+      data-disabled="{{ action.disabled || false }}"
+      data-fn="{{ action.fn || false }}"
+
+      hover-class="{{ action.disabled ? '' : 'clickHover'}}"
+      hover-stay-time="100">
+      <view class="border-bottom-1px" style="{{ action.style || '' }}">
+        {{ action.title }}
+        <text class="xi-item--desc">{{ actions.desc }}</text>
+      </view>
+    </view>
+
+    <!-- cancel text -->
+    <view class="xi-item xi-cancel--text"
+      wx:if="{{ cancelText }}"
+      data-target="close"
+      bindtap="handleClose"
+      hover-class="clickHover"
+      hover-stay-time="100">
+      {{ cancelText }}
+    </view>
+  </view>
+</view>
