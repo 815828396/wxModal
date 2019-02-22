@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/list/list",
+    "pages/province/province",
     "pages/progress/progress",
     "pages/actionSheet/actionSheet",
     "pages/index/index"
@@ -13,6 +15,7 @@
   "usingComponents": {
     "font-icon": "./public/components/fontIcon/font-icon",
     "switch-tab": "./public/components/switchTab/switch-tab",
+    "province-group": "./public/components/province/province",
     "xi-action-sheet": "./public/components/action-sheet/action",
     "xi-button": "./public/components/button/button",
     "xi-progress": "./public/components/progress/progress",

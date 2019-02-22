@@ -1,0 +1,47 @@
+<!--public/components/province/province.wxml-->
+<view class="xi-province">
+  <xi-cell>
+    <view slot="title">省份</view>
+    <picker slot="msg"
+      data-target="provice"
+      mode="selector"
+      range="{{ provice }}"
+      range-key="name"
+      value="{{ index[0] === -1 ? index[0] + 1 : index[0] }}"
+      disabled="{{ provice.length === 0 }}"
+      bindchange="handleChange">
+      <text>{{ provice[ index[0] ].name }}</text>
+      <font-icon iconClass="icon-jiantou1"></font-icon>
+    </picker>
+  </xi-cell>
+
+  <xi-cell>
+    <view slot="title">城市</view>
+    <picker slot="msg"
+      data-target="city"
+      mode="selector"
+      range="{{ city }}"
+      range-key="name"
+      value="{{ index[1] === -1 ? index[1] + 1 : index[1] }}"
+      disabled="{{ city.length === 0 }}"
+      bindchange="handleChange">
+      <text>{{ city[ index[1] ].name || '请选择' }}</text>
+      <font-icon iconClass="icon-jiantou1"></font-icon>
+    </picker>
+  </xi-cell>
+
+  <xi-cell>
+    <view slot="title">选择地区</view>
+    <picker slot="msg"
+      data-target="area"
+      mode="selector"
+      range="{{ area }}"
+      range-key="name"
+      value="{{ index[2] === -1 ? index[2] + 1 : index[2] }}"
+      disabled="{{ area.length === 0 }}"
+      bindchange="handleChange">
+      <text>{{ area[ index[2] ].name || '请选择' }}</text>
+      <font-icon iconClass="icon-jiantou1"></font-icon>
+    </picker>
+  </xi-cell>
+</view>

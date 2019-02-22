@@ -1,31 +1,9 @@
-@import './_mixin.wxss';
-/* image { width: 100%; height: 100%; } */
-.flexbox { display: flex; }
-.fl { float: left; }
-.fr { float: right; }
-.flex1 { flex-flow: 1; }
-.fz12 { font-size: 24rpx; color: #73737D; }
-.fz14 { font-size: 28rpx; color: #73737D; }
-.fz16 { font-size: 32rpx; color: #73737D; }
-.fz12.c, .fz14.c, .fz16.c { color: #C8C8D2; }
-.mt10 { margin-top: 10rpx; }
-.ml10 { margin-left: 10rpx; }
-.mr10 {margin-right: 10rpx; }
-.mb20 { margin-bottom: 20rpx; }
-.mt20 { margin-top: 20rpx;}
-.mr20 { margin-right: 20rpx;}
-.ml20 { margin-left: 20rpx; }
-.tcenter { text-align: center; }
-.tright { text-align: right; }
-.tleft { text-align: left; }
-.pl30 { padding-left: 30rpx; }
-.resetBtn { padding-left: 10rpx; border-left: 1rpx solid #73737D !important; }
-.scroll-h { height: 100%; }
-/* 图片, 描述 列表样式 */
+/* pages/list/list.wxss */
 .xi-list .xi-list__header { padding: 0 30rpx; box-sizing: border-box; line-height: 88rpx; min-height: 88rpx; 
   background: #F5F5FA; font-size: 28rpx; color: #73737D;  }
 .xi-list .xi-list__item { padding-left: 30rpx; }
-.xi-list .xi-list__inner { padding-left: 30rpx; box-sizeing: border-box; display: flex; align-items: center; padding: 20rpx 30rpx 20rpx 0; }
+.xi-list .xi-list__item .xi-list__inner { padding-left: 30rpx; box-sizeing: border-box; display: flex; align-items: center;
+  padding: 20rpx 30rpx 20rpx 0; }
 .xi-list__item .img { width: 100rpx; height: 100rpx; flex-shrink: 0 }
 .xi-list__item .img image { width: 100%; height: 100%; }
 .xi-list__item .cont { display: flex; flex-direction: column; justify-content: center; flex-grow: 1; margin: 0 30rpx; }

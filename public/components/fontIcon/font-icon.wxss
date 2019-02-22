@@ -1,3 +1,6 @@
 /* public/components/fontIcon/font-icon.wxss */
 @import '../../../assets/fonts/iconfont.wxss';
 .iconfont-wrap { display: inline-block }
+.iconfont-wrap .iconfont.icon-min { font-size: 24rpx; }
+.iconfont-wrap .iconfont.icon-mid { font-size: 28rpx; }
+.iconfont-wrap .iconfont.icon-max { font-size: 30rpx; }

@@ -1,0 +1,60 @@
+<!--pages/list/list.wxml-->
+<view class="xi-list">
+  <view class="xi-list__header">产品型号</view>
+
+  <view class="xi-list__item "
+    hover-class="clickHover">
+    <view class="xi-list__inner border-bottom-1px">
+    
+      <view class="img">
+        <image src="../../assets/images/artboard.png"></image>
+      </view>
+      <view class="cont">
+        <text class="title">火花塞</text>
+        <text class="desc">品牌名称</text>
+      </view>
+      <view class="msg">
+        <font-icon iconClass="icon-jiantou1"></font-icon>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="xi-list__item "
+    hover-class="clickHover"
+    hover-stay-time="100">
+    <view class="xi-list__inner border-bottom-1px">
+    
+      <view class="img">
+        <image src="../../assets/images/artboard.png"></image>
+      </view>
+      <view class="cont">
+        <text class="title">火花塞</text>
+        <text class="desc">品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称品牌名称</text>
+      </view>
+      <view class="msg">
+        <text>立即修改</text>
+        <font-icon iconClass="icon-jiantou1"></font-icon>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="xi-list__item maxImg"
+    hover-class="clickHover">
+    <view class="xi-list__inner border-bottom-1px">
+    
+      <view class="img">
+        <image src="../../assets/images/artboard.png"></image>
+      </view>
+      <view class="cont">
+        <text class="title">火花塞</text>
+        <text class="desc">品牌名称</text>
+      </view>
+      <view class="msg">
+        <font-icon iconClass="icon-jiantou1"></font-icon>
+      </view>
+    </view>
+
+  </view>
+</view>

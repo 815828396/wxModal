@@ -1,6 +1,6 @@
 // 请求地址
-const DEV = 'https://mp.ctbls.com'
-const PRO = 'https://xmp.ctbls.com'
+const DEV = 'https://xmp.ctbls.com/smN/'
+const PRO = 'https://mp.ctbls.com/smN/'
 
 const fetch = (url, data = {}, method = 'POST', header) => {
   /** 默认配置头 */

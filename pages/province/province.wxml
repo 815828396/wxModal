@@ -1,0 +1,5 @@
+<!--pages/province/province.wxml-->
+<province-group
+  bind:info="info">
+
+</province-group>
