@@ -1,0 +1,2 @@
+/* public/components/swiper-item/swiper-item.wxss */
+.xi-swiper-item { display: inline-block }

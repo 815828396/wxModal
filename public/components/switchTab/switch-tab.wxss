@@ -1,8 +1,10 @@
 /* public/components/switchTab/switch-tab.wxss */
-.tab-wrap { width: 100%; }
-.tab-head { display: flex; }
-.tab-head .tab-head_item { position: relative; display: flex; align-items: center; justify-content: center; flex-grow: 1;
-  min-height: 80rpx; font-size: 28rpx; color: #73737D; border-bottom: 8rpx solid transparent; }
+.tab-wrap { width: 100%; position: relative }
+.tab-head { position: relative; white-space: nowrap; }
+.tab-wrap .fixed { position: absolute; right: 0; top:0; background: #fff; height: 80rpx; line-height: 88rpx; background: #fff; width: 25%; }
+.tab-head .tab-head_item.fixed::before { position: absolute; content: ""; left: -2rpx; width: 2rpx; height: 100%; box-shadow: 0 0 3rpx #ccc;  }
+.tab-head .tab-head_item { display: inline-block;  align-items: center; justify-content: center; flex-grow: 1;
+  min-height: 80rpx; line-height: 88rpx; font-size: 28rpx; color: #73737D; border-bottom: 8rpx solid transparent; }
 .tab-head_title { display: inline-block; width: 100%; text-align: center; }
 .tab-head_title.line { border-right: 1rpx solid #ECEDF1; }
 .tab-head_item:last-child .line { border-right: none; }

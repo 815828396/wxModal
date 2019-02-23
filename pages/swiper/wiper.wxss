@@ -1,0 +1,3 @@
+/* pages/swiper/wiper.wxss */
+.item { width: 200rpx; height: 100rpx; margin-right: 10rpx; border: 1rpx solid #ccc; }
+.dis { border: 1rpx solid #ccc; }

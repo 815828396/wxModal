@@ -5,9 +5,9 @@ import regeneratorRuntime  from './regenerator-runtime/runtime'
 /**
  * 获取 单个或多个标签 selector 元素属性信息
  * @param {String} property 需要获取的属性, 当传入 {} 空对象时， 返回所有属性
- * @param  {...any} args 获取的 标签元素ID
+ * @param  {...any} args 获取的 标签元素ID 如：'#tab'
  */
-export let getSelectorAttr = ({property: ARG_property = {}}, ...args) => {
+export let getSelectorAttr = ({ property: ARG_property = {} }, ...args) => {
   /** if have the Property */
   if (Object.keys(ARG_property).length !== 0) {
     const perty = ['height', 'width', 'top', 'left', 'right', 'bottom', 'dataset', 'id'].indexOf(ARG_property)
@@ -16,6 +16,9 @@ export let getSelectorAttr = ({property: ARG_property = {}}, ...args) => {
   if (args.length === 0) console.warn('未传入任何 ID 元素,无法获取对应属性')
   return new Promise(resolve => {
     let result = [];
+    // FIXME 存在 this 指向 问题, 无法获取组件中的 dom 元素
+    // 需要传入一个 this
+    // wx.createSelectorQuery().in(this)
     let _selarr = [...new Set(args)].map(el => wx.createSelectorQuery().select(el).boundingClientRect())
     let _length = _selarr.length
     _selarr.forEach((_selec, _i) => {
@@ -39,7 +42,7 @@ export let getSelectorAttr = ({property: ARG_property = {}}, ...args) => {
  * @param {element} ARG_interfere 单个干扰元素,如果没有传入 默认 90 rpx 一个 tabbar 高度
  * @param {...any} args 多个干扰元素
  */
-export let setScrollViewFixedTop = async function (ARG_interfere = 90, ...args) {
+export let getScrollViewFixedTop = async function (ARG_interfere = 90, ...args) {
   let interfereHeight = 0
   // 采用默认 90 rpx
   if (typeof ARG_interfere === 'number' && args.length === 0)
@@ -51,16 +54,17 @@ export let setScrollViewFixedTop = async function (ARG_interfere = 90, ...args) 
   else if (args.length > 0)
     interfereHeight = await getSelectorAttr({ property: 'height' }, ARG_interfere, ...args)
 
+
   /** 获取的是一个数组,求和 */
   if (Array.isArray(interfereHeight))
     interfereHeight = interfereHeight.reduce((p, n) => p + n)
 
-  let { height: clientHeight } = await screenHeight()
+  let { height: clientHeight, dpr } = await screenHeight()
 
   // if (this.__proto__) {}
 
   /** interferHeight: 干扰元素高度, clientHeight： 屏幕高度 */
-  return { interfereHeight, clientHeight }
+  return { interfereHeight, clientHeight, dpr }
 }
 
 /**

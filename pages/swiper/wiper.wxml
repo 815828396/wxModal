@@ -1,0 +1,54 @@
+<!--pages/swiper/wiper.wxml-->
+
+<view>
+  <view>swiper横向滚动</view>
+
+  <swiper
+    next-margin="10px"
+    display-multiple-items="1">
+    <swiper-item class="dis">
+      内容1
+    </swiper-item>
+    <swiper-item class="dis">
+      内容1
+    </swiper-item>
+    <swiper-item class="dis">
+      内容2
+    </swiper-item>
+    <swiper-item class="dis">
+      内容3
+    </swiper-item>
+    <swiper-item class="dis">
+      内容4
+    </swiper-item>
+    <swiper-item class="dis">
+      内容5
+    </swiper-item>
+
+  </swiper>
+
+
+  <swiper-group>
+    <xi-swiper-item>
+      <view class="item">
+        滑块一
+      </view>
+    </xi-swiper-item>
+    <xi-swiper-item>
+      <view class="item">
+        滑块二
+      </view>
+    </xi-swiper-item>
+    <xi-swiper-item>
+      <view class="item">
+        滑块三
+      </view>
+    </xi-swiper-item>
+    <xi-swiper-item>
+      <view class="item">
+        滑块四
+      </view>
+    </xi-swiper-item>
+  </swiper-group>
+
+</view>

@@ -1,0 +1,5 @@
+<!--public/components/swiper/swiper.wxml-->
+<scroll-view class="xi-swiper-scroll"
+  scroll-x="true">
+  <slot></slot>
+</scroll-view>

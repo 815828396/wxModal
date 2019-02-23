@@ -6,9 +6,6 @@
     hover-class="clickHover">
     <view class="xi-list__inner border-bottom-1px">
     
-      <view class="img">
-        <image src="../../assets/images/artboard.png"></image>
-      </view>
       <view class="cont">
         <text class="title">火花塞</text>
         <text class="desc">品牌名称</text>
@@ -39,7 +36,8 @@
     </view>
 
   </view>
-
+  
+  <!-- maxImg 大图列表 -->
   <view class="xi-list__item maxImg"
     hover-class="clickHover">
     <view class="xi-list__inner border-bottom-1px">

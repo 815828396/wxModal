@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/swiper/wiper",
     "pages/list/list",
     "pages/province/province",
     "pages/progress/progress",
@@ -16,6 +17,8 @@
     "font-icon": "./public/components/fontIcon/font-icon",
     "switch-tab": "./public/components/switchTab/switch-tab",
     "province-group": "./public/components/province/province",
+    "swiper-group": "./public/components/swiper/swiper",
+    "xi-swiper-item": "./public/components/swiper-item/swiper-item",
     "xi-action-sheet": "./public/components/action-sheet/action",
     "xi-button": "./public/components/button/button",
     "xi-progress": "./public/components/progress/progress",

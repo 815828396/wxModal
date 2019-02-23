@@ -1,0 +1,4 @@
+<!--public/components/swiper-item/swiper-item.wxml-->
+<view class="xi-swiper-item">
+  <slot></slot>
+</view>

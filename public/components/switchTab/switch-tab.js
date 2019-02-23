@@ -1,7 +1,7 @@
 // public/components/switchTa/b/switch-tab.js
 import {
   screenHeight,
-  setScrollViewFixedTop,
+  getScrollViewFixedTop,
   getSelectorAttr
 } from '../../../assets/js/wxUntil.js';
 Component({
@@ -9,35 +9,39 @@ Component({
     multipleSlots: true
   },
 
+  externalClasses: ['tab-head-class', 'tab-cont-class'],
+
   properties: {
     tabColumns: Array,
     textLine: {
       type: Boolean,
       value: false
-    }
+    },
+    interHeight: Number,
+    tabLoading: Boolean,
+
+    // 自定义tabHead slot内容
+    userDefined: Boolean
   },
 
   data: {
     tabActive: 0,
     scrollHeight: 0,
-    isScroll: true,
-    tabLoading: false
+    isScroll: true
   },
 
-  ready (e) {
-    // setScrollViewFixedTop(200).then(res => {
-    //   console.log(res)
-    // })
-    // return
-    screenHeight().then(res => {
-      this.setData({
-        scrollHeight: res.height * res.dpr - 88
-      })
+  ready(e) {
+    // TODO 可传入干扰元素Id 获取干扰元素高度, 设置scroll-view高度 - 目前默认88 
+    getScrollViewFixedTop("#profitHead").then(res => {
       console.log(res)
+      const interHeight = res.interfereHeight * res.dpr
+      this.setData({
+        scrollHeight: res.clientHeight * res.dpr - this.data.interHeight
+      })
     })
   },
   methods: {
-    tabClick (e) {
+    tabClick(e) {
       let { index } = e.currentTarget.dataset;
       this.setData({ tabActive: index });
       this.triggerEvent('tabClick', {
@@ -49,10 +53,16 @@ Component({
       this.setData({
         tabLoading: true
       })
-      setTimeout(() => {
-        this.setData({ tabLoading: false })
-      }, 5000)
-      console.log(e)
+
+      // 上拉加载事件
+      // key: 当前触底的 container 标识
+      // dataset: 自定义属性
+      // loading: 加载状态
+      this.triggerEvent('lower', {
+        key: this.data.tabColumns[this.data.tabActive].key,
+        dataset: this.dataset || {},
+        loading: this.data.tabLoading
+      });
     }
   }
 })

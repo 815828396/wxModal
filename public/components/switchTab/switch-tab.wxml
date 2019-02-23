@@ -1,25 +1,31 @@
 <!--public/components/switchTab/switch-tab.wxml-->
 <view class="tab-wrap" id="tabbar">
   <!-- tab head -->
-  <view class="tab-head">
-    <view class="tab-head_item {{ tabActive == index ? 'tab-active--line' : '' }} "
+  <scroll-view scroll-x="true" class="tab-head {{ 'tab-head-class' }}" id="tabHead">
+    <!-- 自定义内容 -->
+    <view wx:if="{{ userDefined }}">
+      <slot name="tabHead"></slot>
+    </view>
+    <!-- 默认内容 -->
+    <view wx:if="{{ !userDefined }}" class="tab-head_item {{ tabActive == index ? 'tab-active--line' : '' }}"
       wx:for="{{ tabColumns }}"
       wx:for-item='columns'
       wx:key="index"
       data-index="{{ index }}"
-      bindtap="tabClick">
+      bindtap="tabClick"
+      style="width: {{ tabColumns.length < 6 ? (100 / tabColumns.length) : ( 100 / 6 ) }}%;">
 
       <text class="tab-head_title {{ textLine ? 'line' : '' }}">{{ columns.title }}</text>
 
-      <slot name="{{ 'tabHead' + columns.key }}"></slot>
+      <slot name="{{ 'tabHead-' + columns.key }}"></slot>
     </view>
 
     <!-- 后期在做可滑动 线条 -->
     <view class="tab-active--line_pos"></view>
-  </view>
+  </scroll-view>
 
   <!-- tab content -->
-  <view class="tab-content">
+  <view class="tab-content {{ 'tab-cont-class' }}">
     <view class="tab-content_inner"
       style="height: {{ scrollHeight }}rpx"
       wx:for="{{ tabColumns }}"
@@ -35,7 +41,8 @@
         <slot name="{{ item.key }}"></slot>
 
         <!-- loading 加载 -->
-        <view class="tab-lower--loading {{ tabLoading ? 'tab-loading--active' : '' }}">
+        <view 
+          class="tab-lower--loading {{ tabLoading ? 'tab-loading--active' : '' }}">
           <font-icon class="{{ tabLoading ? 'loading-rotate' : '' }}" iconClass="icon-loading" />
           加载中...
         </view>
