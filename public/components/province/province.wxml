@@ -15,7 +15,7 @@
     </picker>
   </xi-cell>
 
-  <xi-cell>
+  <xi-cell wx:if="{{ zIndex > 1  }}">
     <view slot="title">城市</view>
     <picker slot="msg"
       data-target="city"
@@ -30,7 +30,7 @@
     </picker>
   </xi-cell>
 
-  <xi-cell>
+  <xi-cell wx:if="{{ zIndex > 2 }}">
     <view slot="title">选择地区</view>
     <picker slot="msg"
       data-target="area"

@@ -7,7 +7,7 @@
   <!-- 展示图片 -->
   <view class="upload-image--privew"
     wx:if="{{ uploadImagePath || privewImagePath }}">
-    <image class="privew-image" src="{{ uploadImagePath }}" mode="aspectFit"></image>
+    <image class="privew-image" src="{{ uploadImagePath || privewImagePath }}" mode="aspectFit"></image>
   </view>
 
   <!-- 上传图片 -->

@@ -1,4 +1,5 @@
 // public/components/province/province.js
+import behavior from "../../../utils/behavior.js";
 import fetch from "../../../assets/js/fetch/fetch";
 
 const env_provice = 'Authority/getPro';
@@ -7,8 +8,15 @@ const env_area = 'Authority/getCity';
 
 Component({
 
+  behaviors: [behavior],
+
   properties: {
-    proviceText: String
+    proviceText: String,
+    // 省市区层级
+    zIndex: {
+      type: String,
+      value: 3
+    }
   },
   
   data: {
@@ -47,11 +55,11 @@ Component({
       if (change.area) {
         this.data.index[2] = _index;
 
-        this.triggerEvent('info', {
+        this.trigger('info', {
           provice: this.data.provice[this.data.index[0]],
           city: this.data.city[this.data.index[1]],
           area: this.data.area[this.data.index[2]]
-        });
+        })
       }
 
       this.setData({
@@ -99,7 +107,7 @@ Component({
         })
 
         // TODO 向父组件提交事件, 返回相关信息
-        this.triggerEvent('info', {
+        this.trigger('info', {
           provice: this.data.provice[this.data.index[0]],
           city: this.data.city[this.data.index[1]],
           area: this.data.area[this.data.index[2]]

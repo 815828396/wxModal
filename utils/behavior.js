@@ -25,5 +25,9 @@ export default Behavior({
     getChildComponents (componentUrl) {
       return this.getRelationNodes(componentUrl);
     },
+    // 提交事件
+    trigger (event, arg) {
+      this.triggerEvent(event, arg)
+    }
   }
 })
