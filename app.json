@@ -7,6 +7,15 @@
     "pages/actionSheet/actionSheet",
     "pages/index/index"
   ],
+  "subpackages": [
+    {
+      "root": "page_component",
+      "pages": [
+        "pages/dialog",
+        "pages/modal"
+      ]
+    }
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
